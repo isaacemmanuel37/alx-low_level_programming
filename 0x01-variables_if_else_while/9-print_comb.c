@@ -1,24 +1,22 @@
 #include <stdio.h>
-
 /**
- * main- main function
+ * main - main function
  * Return: 0 when sucessful
  */
 
 int main(void)
 {
-int num;
+	int i;
 
-for (num = 0; num <= 9; num++)
-{
-putchar((num % 10) + '0');
-if (num == 9)
-continue;
-
-putchar(',');
-putchar('~');
-}
-
-putchar('\n');
-return (0);
+	for (i = 0; i < 10; i++)
+	{
+		putchar(i + '0');
+		if (i != 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+	}
+	putchar('\n');
+	return (0);
 }
